@@ -33,7 +33,7 @@ while true {
     
     // Check that integer is in desired range
     // REMEMBER: Guard statement conditions describe what we WANT
-    guard integerGiven > 0, integerGiven < 11 else {
+    guard integerGiven > 0, integerGiven <= 10 else {
         
         // Integer not in desired range, return to top and ask again
         continue
@@ -68,9 +68,11 @@ var briefcaseValues = [100, 500, 1_000, 5_000, 10_000, 25_000, 50_000, 100_000, 
 // OUTPUT / RETURN VALUE:
 //
 // An integer between 1 and 10, inclusive
+
 func getBriefcaseOpened(onTurn turn: Int) -> Int {
     
     // STUDENTS: Complete this function
+    
     
     
     // The statement below can be modified
@@ -79,12 +81,15 @@ func getBriefcaseOpened(onTurn turn: Int) -> Int {
 }
 
 // Loop and ask what briefcases have been opened
+
 for turn in 1...briefcasesOpened {
     
     // Get which briefcase was opened
+    
     let briefcaseOpenedThisTime = getBriefcaseOpened(onTurn: turn)
     
     // STUDENTS: Now that you know what briefcase is opened... what might you do to the array value(s)?
+    
     briefcaseValues[briefcaseOpenedThisTime - 1] = 0
     
 }
